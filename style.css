@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #222222;
+    --color2: #838383;
+    --color3: #811007;
+    --color4: #f5493c;
+    --color5: rgb(236, 230, 230);
+    --color6: rgb(209, 202, 202);
+}
+
+::selection {
+    color: var(--color5);
+    background: var(--color3);
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: var(--color2);
+    display: block;
+    justify-content: center;
+}
+
+.half_main {
+    position: absolute;
+    width: 100%;
+    min-height: 50vh;
+    background: var(--color1);
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.8);
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.box:hover {
+    width: 600px;
+}
+
+.left {
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 230, 230);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.left img {
+    position: relative;
+    left: 20px;
+    min-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.box:hover .left img {
+    transform: rotate(21deg);
+}
+
+.right {
+    position: relative;
+    background: var(--color1);
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+}
+
+.right::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgb(236, 230, 230);
+}
+
+.right h3 {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(236, 230, 230);
+    line-height: 0.9em;
+}
+
+.right h3 span {
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.85;
+}
+
+.right h4 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+
+}
+
+.right p {
+    color: var(--color5);
+    opacity: 0.85;
+    font-size: 13px;
+}
+
+.right .qn {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-top: 8px;
+}
+
+.right .qn li {
+    border: 2px solid var(--color5);
+    color: var(--color5);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.right .qn li:hover {
+    background: var(--color3);
+    border: 2px solid var(--color3);
+    color: var(--color5);
+    opacity: 1;
+}
+
+.right .price {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.right .price h2 {
+    color: var(--color5);
+    font-size: 25px;
+}
+
+.right .price h2 sup {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.right .price h2 small {
+    font-size: 20px;
+}
+
+.right .price button {
+    display: inline-flex;
+    padding: 10px 25px;
+    border: 2px solid var(--color5);
+    border-radius: 20px;
+    background: none;
+    color: var(--color5);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.right .price button:hover {
+    background: var(--color3);
+    color: var(--color5);
+}
